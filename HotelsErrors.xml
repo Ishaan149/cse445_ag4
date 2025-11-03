@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- ERROR #1: Wrong root element name. Should be <Hotels>, but we use <Hotel> -->
 <Hotel>
-
-  <!-- Hotel 1: Valid (baseline example) -->
   <Hotel Rating="4.2">
-    <Name>Westin</Name>
+    <Name>The Westin Tempe</Name>
     <Phone type="local">480-968-8885</Phone>
-    <Phone type="tollfree">800-937-8461</Phone>
+    <Phone type="tollfree">888-236-2427</Phone>
     <Address>
       <Number>11</Number>
       <Street>E 7th St</Street>
@@ -17,14 +14,12 @@
     </Address>
   </Hotel>
 
-  <!-- Hotel 2: ERROR #2 — required attribute missing on one Phone (no type="...") -->
   <Hotel Rating="3.9">
-    <Name>Hyatt Place Tempe</Name>
-    <Phone>480-123-4567</Phone>
-    <Phone type="tollfree">888-555-0101</Phone>
+    <Name>Hyatt Place Tempe / Phoenix / University</Name>
+    <Phone>480-207-1578</Phone>
     <Address>
-      <Number>1413</Number>
-      <Street>S Rural Rd</Street>
+      <Number>601</Number>
+      <Street>E 6th St</Street>
       <City>Tempe</City>
       <State>AZ</State>
       <Zip>85281</Zip>
@@ -32,26 +27,11 @@
     </Address>
   </Hotel>
 
-  <!-- Hotel 3: ERROR #3 — missing ALL Phone elements (minOccurs=1 violated) -->
   <Hotel>
-    <Name>Marriott Phoenix Downtown</Name>
+    <Name>AC Hotel Phoenix Tempe/Downtown</Name>
+    <Phone type="local">480-642-6140</Phone>
     <Address>
       <Number>100</Number>
-      <Street>N 1st St</Street>
-      <City>Phoenix</City>
-      <State>AZ</State>
-      <Zip>85004</Zip>
-      <NearestAirport>Sky Harbor</NearestAirport>
-    </Address>
-  </Hotel>
-
-  <!-- Hotel 4: ERROR #4 — two Name elements -->
-  <Hotel Rating="4.5">
-    <Name>Hilton Garden Inn Tempe</Name>
-    <Name>Duplicate Name Should Not Exist</Name>
-    <Phone type="local">480-555-0199</Phone>
-    <Address>
-      <Number>2102</Number>
       <Street>E Rio Salado Pkwy</Street>
       <City>Tempe</City>
       <State>AZ</State>
@@ -60,25 +40,8 @@
     </Address>
   </Hotel>
 
-  <!-- Hotel 5: Valid -->
-  <Hotel>
-    <Name>Courtyard by Marriott Tempe</Name>
-    <Phone type="local">480-555-0123</Phone>
-    <Phone type="tollfree">877-555-0123</Phone>
-    <Address>
-      <Number>601</Number>
-      <Street>S Ash Ave</Street>
-      <City>Tempe</City>
-      <State>AZ</State>
-      <Zip>85281</Zip>
-      <NearestAirport>Sky Harbor</NearestAirport>
-    </Address>
-  </Hotel>
-
-  <!-- Hotel 6: Valid -->
   <Hotel Rating="4.0">
-    <Name>Residence Inn Tempe</Name>
-    <Phone type="local">480-555-0140</Phone>
+    <Name>Residence Inn Tempe Downtown/University</Name>
     <Address>
       <Number>510</Number>
       <Street>S Forest Ave</Street>
@@ -89,25 +52,10 @@
     </Address>
   </Hotel>
 
-  <!-- Hotel 7: Valid -->
-  <Hotel>
-    <Name>AC Hotel Phoenix Tempe/Downtown</Name>
-    <Phone type="local">480-555-0147</Phone>
-    <Phone type="tollfree">800-555-0147</Phone>
-    <Address>
-      <Number>100</Number>
-      <Street>E Rio Salado Pkwy</Street>
-      <City>Tempe</City>
-      <State>AZ</State>
-      <Zip>85281</Zip>
-      <NearestAirport>Sky Harbor</NearestAirport>
-    </Address>
-  </Hotel>
-
-  <!-- Hotel 8: Valid -->
   <Hotel Rating="4.1">
     <Name>Sheraton Phoenix Downtown</Name>
-    <Phone type="local">602-555-0160</Phone>
+    <Phone type="local">602-262-2500</Phone>
+    <Phone type="tollfree">800-325-3535</Phone>
     <Address>
       <Number>340</Number>
       <Street>N 3rd St</Street>
@@ -118,13 +66,12 @@
     </Address>
   </Hotel>
 
-  <!-- Hotel 9: Valid -->
   <Hotel>
-    <Name>Hampton Inn Tempe</Name>
-    <Phone type="local">480-555-0175</Phone>
+    <Name>Hampton Inn &amp; Suites Phoenix Tempe</Name>
+    <Phone type="local">480-941-3441</Phone>
     <Address>
-      <Number>51</Number>
-      <Street>E 5th St</Street>
+      <Number>1415</Number>
+      <Street>N Scottsdale Rd</Street>
       <City>Tempe</City>
       <State>AZ</State>
       <Zip>85281</Zip>
@@ -132,10 +79,10 @@
     </Address>
   </Hotel>
 
-  <!-- Hotel 10: ERROR #5 — Address is NOT closed (place near the end) -->
   <Hotel Rating="3.8">
     <Name>Aloft Tempe</Name>
-    <Phone type="local">480-555-0188</Phone>
+    <Phone type="local">480-621-3300</Phone>
+    <Phone type="tollfree">888-236-2427</Phone>
     <Address>
       <Number>951</Number>
       <Street>E Playa Del Norte Dr</Street>
@@ -143,9 +90,71 @@
       <State>AZ</State>
       <Zip>85281</Zip>
       <NearestAirport>Sky Harbor</NearestAirport>
-    <!-- INTENTIONAL ERROR: Missing </Address> here -->
   </Hotel>
 
-<!-- Close the (wrong) root -->
-</Hotel>
+  <Hotel>
+    <Name>Moxy Phoenix Tempe/ASU Area</Name>
+    <Phone type="local">480-968-3451</Phone>
+    <Address>
+      <Number>1333</Number>
+      <Street>S Rural Rd</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
 
+  <Hotel Rating="3.9">
+    <Name>Graduate Tempe</Name>
+    <Phone type="local">480-967-9431</Phone>
+    <Address>
+      <Number>225</Number>
+      <Street>E Apache Blvd</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="4.5">
+    <Name>Hilton Garden Inn Phoenix/Tempe ASU Area</Name>
+    <Name>Hilton Garden Inn Phoenix/Tempe ASU Area</Name>
+    <Phone type="local">480-968-2180</Phone>
+    <Address>
+      <Number>86</Number>
+      <Street>S Rockford Dr</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>Hilton Garden Inn Phoenix Tempe – University Research Park</Name>
+    <Phone type="local">480-897-5100</Phone>
+    <Address>
+      <Number>7290</Number>
+      <Street>S Price Rd</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85283</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="4.2">
+    <Name>Renaissance Phoenix Downtown Hotel</Name>
+    <Phone type="local">602-333-0000</Phone>
+    <Address>
+      <Number>100</Number>
+      <Street>N 1st St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+</Hotel>
