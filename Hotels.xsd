@@ -11,7 +11,6 @@
               <xs:element name="Phone" type="PhoneType" minOccurs="1" maxOccurs="unbounded"/>
               <xs:element name="Address" type="AddressType"/>
             </xs:sequence>
-
             <xs:attribute name="Rating" type="xs:decimal" use="optional"/>
           </xs:complexType>
         </xs:element>
@@ -30,14 +29,19 @@
     </xs:sequence>
   </xs:complexType>
 
-
   <xs:complexType name="PhoneType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
-        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="type" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="local"/>
+              <xs:enumeration value="tollfree"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
 </xs:schema>
-
