@@ -1,1 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ERROR #1: Wrong root element name. Should be <Hotels>, but we use <Hotel> -->
+<Hotel>
+
+  <!-- Hotel 1: Valid (baseline example) -->
+  <Hotel Rating="4.2">
+    <Name>Westin</Name>
+    <Phone type="local">480-968-8885</Phone>
+    <Phone type="tollfree">800-937-8461</Phone>
+    <Address>
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <!-- Hotel 2: ERROR #2 — required attribute missing on one Phone (no type="...") -->
+  <Hotel Rating="3.9">
+    <Name>Hyatt Place Tempe</Name>
+    <Phone>480-123-4567</Phone>
+    <Phone type="tollfree">888-555-0101</Phone>
+    <Address>
+      <Number>1413</Number>
+      <Street>S Rural Rd</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <!-- Hotel 3: ERROR #3 — missing ALL Phone elements (minOccurs=1 violated) -->
+  <Hotel>
+    <Name>Marriott Phoenix Downtown</Name>
+    <Address>
+      <Number>100</Number>
+      <Street>N 1st St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <!-- Hotel 4: ERROR #4 — two Name elements -->
+  <Hotel Rating="4.5">
+    <Name>Hilton Garden Inn Tempe</Name>
+    <Name>Duplicate Name Should Not Exist</Name>
+    <Phone type="local">480-555-0199</Phone>
+    <Address>
+      <Number>2102</Number>
+      <Street>E Rio Salado Pkwy</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <!-- Hotel 5: Valid -->
+  <Hotel>
+    <Name>Courtyard by Marriott Tempe</Name>
+    <Phone type="local">480-555-0123</Phone>
+    <Phone type="tollfree">877-555-0123</Phone>
+    <Address>
+      <Number>601</Number>
+      <Street>S Ash Ave</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <!-- Hotel 6: Valid -->
+  <Hotel Rating="4.0">
+    <Name>Residence Inn Tempe</Name>
+    <Phone type="local">480-555-0140</Phone>
+    <Address>
+      <Number>510</Number>
+      <Street>S Forest Ave</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <!-- Hotel 7: Valid -->
+  <Hotel>
+    <Name>AC Hotel Phoenix Tempe/Downtown</Name>
+    <Phone type="local">480-555-0147</Phone>
+    <Phone type="tollfree">800-555-0147</Phone>
+    <Address>
+      <Number>100</Number>
+      <Street>E Rio Salado Pkwy</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <!-- Hotel 8: Valid -->
+  <Hotel Rating="4.1">
+    <Name>Sheraton Phoenix Downtown</Name>
+    <Phone type="local">602-555-0160</Phone>
+    <Address>
+      <Number>340</Number>
+      <Street>N 3rd St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <!-- Hotel 9: Valid -->
+  <Hotel>
+    <Name>Hampton Inn Tempe</Name>
+    <Phone type="local">480-555-0175</Phone>
+    <Address>
+      <Number>51</Number>
+      <Street>E 5th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <!-- Hotel 10: ERROR #5 — Address is NOT closed (place near the end) -->
+  <Hotel Rating="3.8">
+    <Name>Aloft Tempe</Name>
+    <Phone type="local">480-555-0188</Phone>
+    <Address>
+      <Number>951</Number>
+      <Street>E Playa Del Norte Dr</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>Sky Harbor</NearestAirport>
+    <!-- INTENTIONAL ERROR: Missing </Address> here -->
+  </Hotel>
+
+<!-- Close the (wrong) root -->
+</Hotel>
 
